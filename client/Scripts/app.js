@@ -1,5 +1,4 @@
 /* custom JS goes here */
-/* custom JS goes here */
 
 let deleteBtn = null;
 
