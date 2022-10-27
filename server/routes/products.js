@@ -85,16 +85,20 @@ router.post("/details/:id", (req, res, next) => {
 });
 
 // GET - process the delete
-router.get("/delete", (req, res, next) => {
-  // let id = req.params.id;
-  // product.remove({ _id: id }, (err) => {
-  //   if (err) {
-  //     console.log(err);
-  //     res.end(err);
-  //   } else {
-  //     res.redirect("/book-list");
-  //   }
-  // });
+router.get("/delete/:id", (req, res, next) => {
+  /*****************
+   * ADD CODE HERE *
+   *****************/
+  let id = req.params.id;
+
+  product.deleteMany({ Productname: id }, (err) => {
+    if (err) {
+      console.log(err);
+      res.end(err);
+    } else {
+      res.redirect("/products");
+    }
+  });
 });
 
 module.exports = router;
