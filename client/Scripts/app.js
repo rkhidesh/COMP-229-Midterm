@@ -1,5 +1,16 @@
 /* custom JS goes here */
+/* custom JS goes here */
 
+let deleteBtn = null;
+
+function Delete() {
+  let deleteBtn = prompt("Enter product name you wish to delete");
+  if (deleteBtn != null) {
+    let link = document.location.origin + "/products/delete/" + deleteBtn;
+
+    window.location.href = link;
+  }
+}
 /* pagination code from http://www.bootply.com/lxa0FF9yhw */
 $.fn.pageMe = function(opts){
     var $this = this,
