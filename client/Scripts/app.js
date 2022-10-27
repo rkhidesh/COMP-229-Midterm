@@ -10,7 +10,6 @@ function Delete() {
     window.location.href = link;
   }
 }
-
 /* pagination code from http://www.bootply.com/lxa0FF9yhw */
 $.fn.pageMe = function (opts) {
   var $this = this,
